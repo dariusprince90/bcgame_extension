@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "BC Game Crash Classic",
+    "version": "1.0",
+    "author": {
+        "name": "Darius Wilson-Prince",
+        "email": "dariusprince90@gmail.com"
+    },
+    "description": "Get the values from BC Game Crash Classic",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": []
+    },
+    "browser_action": {
+        "default_icon": "bcgame.png",
+        "default_title": "BC Game Crash Classic"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://bcgame.ai/game/crash"
+            ],
+            "js": [
+                "crash.js"
+            ]
+        }
+    ]
+}
